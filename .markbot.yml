@@ -1,0 +1,34 @@
+repo: "components-on-a-grid"
+canvasCourse: "web-design-2"
+
+inherit:
+  - naming-restrict-live
+  - git-2
+  - css
+  - border-box
+  - body-margin-0
+
+html:
+  - path: "index.html"
+    locked: true
+
+css:
+  - path: "css/main.css"
+    has:
+      - ["html", "font-family", "Georgia, serif"]
+      - ["html", "line-height", "1.5"]
+      - ["header", "display", "contents"]
+    search:
+      - "#30658d"
+      - "#fff"
+      - "#f2f1ed"
+      - "display: grid"
+      - "display: flex"
+      - "grid-template-(columns|rows)?"
+      - "grid-template-areas"
+      - "grid-area"
+      - '"Patua One", sans-serif'
+
+screenshots:
+  - path: "index.html"
+    sizes: [1000]

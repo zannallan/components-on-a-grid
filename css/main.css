@@ -1,6 +1,6 @@
 html {
   box-sizing: border-box;
-  font-family: Patua One, serif;
+  font-family: Georgia, serif;
   line-height: 1.5;
 }
 
@@ -12,11 +12,17 @@ html {
 
 body {
   background-color: #f2f1ed;
-  margin: 1rem;
+  margin: 0;
+  display: grid;
+  grid-template-areas:
+    "box1"
+    "box2";
 }
 
 img {
   width: 100%;
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
 }
 
 .logo {
@@ -24,27 +30,24 @@ img {
 }
 
 header {
+  display: contents;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(4, 1fr);
-}
-
-img {
-  grid-column: 1 / -1;
-  grid-row: 1 / -1;
+  grid-area: box1;
+  margin: 1rem;
+  margin-bottom: 0;
 }
 
 nav {
   grid-column: 3 / -1;
   grid-row: 1;
   z-index: 1;
+  font-family: "Patua One", sans-serif;
 }
 
 nav ul {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr;
-  grid-gap: 2em;
+  display: flex;
   list-style-type: none;
   text-align: center;
   padding-right: 3rem;
@@ -54,6 +57,7 @@ nav ul {
 li a {
   color: #fff;
   font-size: 2em;
+  margin: 1rem;
 }
 
 li a:hover {
@@ -72,7 +76,10 @@ main {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
   grid-gap: 1rem;
+  grid-area: box2;
   padding-top: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 figure:first-child {
@@ -89,10 +96,10 @@ figure:nth-child(2) {
 
 figcaption p {
   margin-top: 0;
-  font-family: Georgia, serif;
 }
 
 figcaption h2 {
   margin-bottom: 0;
   color: #30658d;
+  font-family: "Patua One", sans-serif;
 }

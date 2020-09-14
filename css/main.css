@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  font-family: Patua One, serif;
 }
 
 *,
@@ -8,11 +9,73 @@ html {
   box-sizing: inherit;
 }
 
+body {
+  margin: 1rem;
+}
+
 img {
   width: 100%;
 }
 
+.logo {
+  width: 14rem;
+}
+
 header {
-  /* Remove the <header> box and allow us to directly apply header’s children to the grid. */
-  display: contents;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+
+img {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+}
+
+nav {
+  grid-column: 3 / -1;
+  grid-row: 1;
+  z-index: 1;
+}
+
+nav ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-gap: 2em;
+  list-style-type: none;
+  text-align: center;
+  padding-right: 3rem;
+  padding-top: .5rem;
+}
+
+li a {
+  color: #fff;
+  font-size: 2em;
+}
+
+h1 {
+  grid-column: 1;
+  grid-row: 4 / -1;
+  z-index: 1;
+  padding-left: 1rem;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-gap: 1rem;
+}
+
+figure:first-child {
+  grid-column: 1;
+  grid-row: 1;
+  margin: 0;
+}
+
+figure:nth-child(2) {
+  grid-column: 2;
+  grid-row: 1;
+  margin: 0;
 }

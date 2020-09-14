@@ -1,6 +1,7 @@
 html {
   box-sizing: border-box;
   font-family: Patua One, serif;
+  line-height: 1.5;
 }
 
 *,
@@ -10,6 +11,7 @@ html {
 }
 
 body {
+  background-color: #f2f1ed;
   margin: 1rem;
 }
 
@@ -54,6 +56,10 @@ li a {
   font-size: 2em;
 }
 
+li a:hover {
+  color: #000;
+}
+
 h1 {
   grid-column: 1;
   grid-row: 4 / -1;
@@ -66,6 +72,7 @@ main {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
   grid-gap: 1rem;
+  padding-top: 1rem;
 }
 
 figure:first-child {
@@ -78,4 +85,14 @@ figure:nth-child(2) {
   grid-column: 2;
   grid-row: 1;
   margin: 0;
+}
+
+figcaption p {
+  margin-top: 0;
+  font-family: Georgia, serif;
+}
+
+figcaption h2 {
+  margin-bottom: 0;
+  color: #30658d;
 }
